@@ -1,71 +1,87 @@
-.frame{
-	border-top: 90px solid;
-	border-bottom: 50px solid;
-	border-left: 50px solid;
-	border-right: 50px solid;
-	position: absolute;
-	border-color: var(--pale-spring);
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	box-sizing: border-box;
+.framed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-color:aliceblue;
+    border-style: solid;
+    border-width: 90px 50px 50px 50px;
+    transition: border-width 0.2s;
+}
+.un-framed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-color:aliceblue;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    transition: border-width 0.2s ;
+
 }
 .center {
     position: fixed;
     top: 50px;
-	left: 50%;
-	transform: translate3d(-50%, 0%, 0);
-	z-index: 1;
+    left: 50%;
+    transform: translate3d(-50%, 0%, 0);
 }
-button{
-	border:none;
-	background:#05668D;
-	color:white;
-	cursor: pointer;
-	outline: none;
-	height: 74px;
-	width: 74px;
+
+button {
+    border: none;
+    background: var(--menu-button);;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    height: 74px;
+    width: 74px;
+    z-index: 200;
 }
 
 .overlay {
-	display: flex;
-	justify-items: center;
-	justify-content: center;
-	visibility: hidden;
-	/* align-items: stretch; */
-	justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    visibility: hidden;
+    /* align-items: stretch; */
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 100vh;
     background: var(--seaweed);
-    position: absolute;
+    position: fixed;
     top: 0;
-	left: 0;
+    left: 0;
 }
 
 .open {
-	visibility: visible;
+    visibility: visible;
+    overflow: hidden;
 }
 
-ul{
-	list-style-type: none;
-
-}
-a{
-	text-decoration: none;
-	color: #000000;
-
-}
-.overlay li{
-	font-size: 40px;
-	text-align: center;
-	padding:5px 0 10px 0;
-	text-decoration: none;
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.overlay li a:hover, .overlay li a:focus {
-	text-decoration: none;
-	color: #6f6f6e;
-	outline: 0;
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.overlay li {
+    font-size: 40px;
+    text-align: center;
+    padding: 5px 0 10px 0;
+    text-decoration: none;
+}
+
+.overlay li a:hover,
+.overlay li a:focus {
+    text-decoration: none;
+    color: #6f6f6e;
+    outline: 0;
 }
