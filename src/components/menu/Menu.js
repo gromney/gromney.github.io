@@ -17,11 +17,11 @@ class Menu extends Component {
     }
 
     _onMouseEnter() {
-        this.setState({isHovering:true});
+        this.setState({ isHovering: true });
 
     }
-    _onMouseLeave(){
-        this.setState({isHovering:false});
+    _onMouseLeave() {
+        this.setState({ isHovering: false });
     }
 
     toggleMenu() {
@@ -30,11 +30,11 @@ class Menu extends Component {
 
     render() {
         const visible = this.state.open && 'open';
-        const framedStyle = this.state.isHovering ? 'framed' :'un-framed';
+        const framedStyle = this.state.isHovering ? 'framed' : 'un-framed';
         console.log(framedStyle);
         return (
-            <div className={`${framedStyle}`}>
-
+            <div>
+                <div className={`${framedStyle}`}></div>
                 <button
                     className="center"
                     onClick={this.toggleMenu}
@@ -49,8 +49,8 @@ class Menu extends Component {
                     <nav>
                         <ul>
                             <li><a href="#about" onClick={this.toggleMenu}>ABOUT</a></li>
-                            <li><a href="#work" onClick={this.toggleMenu}>WORK</a></li>
                             <li><a href="#skills" onClick={this.toggleMenu}>SKILLS</a></li>
+                            <li><a href="#work" onClick={this.toggleMenu}>WORK</a></li>
                             <li><a href="#hobbies" onClick={this.toggleMenu} >HOBBIES</a></li>
                         </ul>
                     </nav>
