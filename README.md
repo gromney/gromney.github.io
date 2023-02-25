@@ -1,4 +1,8 @@
-### Hi there 👋
+## Hi there 👋
+I'm a software developer and I will use this mockup to make my portfolio website at GitHub Pages.\
+Check my progress [gromney.github.io](https://gromney.github.io)
+
+<img src="https://user-images.githubusercontent.com/781571/221367809-cb13708f-3560-4d9e-bba4-592f1b795a21.jpg"  height=400 alt="mockup portfolio 2023">
 
 <!--
 **gromney/gromney** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
