@@ -6,42 +6,120 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <title>GR - portfolio2023</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <title>Geronimo Romney</title>
 </head>
 
 <body>
-  <div class="app">
-    <header class="header-container">header</header>
-    <main class="main-container">
-      <section class="section" id="landing">
-        <div class="content landing-content">
-          <h1 class="lines">
-            <p class="line">hola.</p>
-            <p class="line">Este es el portafolio</p>
-            <p class="line">de Geronimo Romney.</p>
-            <p class="line">Soy desarrollador Back-End</p>
-          </h1>
-          <div class="skills-content">
-            <ul class="hard-skills-list">
-              <li>.NET - C#</li>
-              <li>SQLServer</li>
-              <li>HTML</li>
-              <li>Javascript</li>
-              <li>ReactJS</li>
+  <header class="header-container">
+    <div class="content header-content">
+      <div class="logo">
+        <a href="#landing"> Geronimo Romney </a>
+      </div>
+      <div class="menu">
+        <!-- <ul class="menu-list">
+            <li><a href="#projects">proyectos</a></li>
+          </ul> -->
+        <ul class="menu-list contacts">
+          <li>
+            <a href="https://t.me/gromney" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/img/telegram.svg" alt="telegram contact me" />
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/gromney" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/img/linkedin.svg" alt="linkedin contact me" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/gromney" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/img/github.svg" alt="github contact me" />
+            </a>
+          </li>
+          <li>
+            <a href="mailto:g.romney@gmail.com">
+              <img src="./assets/img/envelope-solid.svg" alt="email contact me" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="section" id="landing">
+      <div class="content">
+        <h1 class="lines">
+          <p class="line">Hola.</p>
+          <p class="line">Soy Geronimo</p>
+          <p class="line">desarrollador .NET.</p>
+          <p class="line"><a href="#contact">contactame</a></p>
+        </h1>
+        <div class="skiills">
+          <div class="skills-section">
+            <h3 class="title">Habilidade de Programaciòn</h3>
+            <ul class="skill-list">
+              <li><span>C#</span></li>
+              <li><span>.NET core</span></li>
+              <li><span>SQL Server</span></li>
+              <li><span>HTML</span></li>
+              <li><span>CSS</span></li>
+              <li><span>TypeScript</span></li>
+              <li><span>Angular</span></li>
+              <li><span>Azure</span></li>
+              <li><span>Firebase</span></li>
+              <li><span>Javascript</span></li>
+              <li><span>ReactJs</span></li>
+              <li><span>Angular</span></li>
             </ul>
-            <ul class="soft-skills-list">
-              <li>Autoaprendizaje</li>
-              <li>Resolución de problemas.</li>
-              <li>Gestión del tiempo</li>
-              <li>Colaboración / Trabajo en equipo</li>
+          </div>
+          <div class="skills-section">
+            <h3 class="title">Otras Habilidades</h3>
+            <ul class="skill-list">
+              <li><span>REST API</span></li>
+              <li><span>Git/Github</span></li>
+              <li><span>Bootstrap / Bulma</span></li>
+              <li><span>Googling 🙂</span></li>
+
             </ul>
           </div>
         </div>
-      </section>
-      <section class="section" id="projects">projects</section>
-      <footer class="section footer-container">footer</footer>
-    </main>
-  </div>
+    </section>
+    <section class="section" id="projects">
+      <div class="content">projects</div>
+    </section>
+    <section class="" id="contact">
+      <div class="content">
+        <h3 class="title">Contacto</h3>
+        <div class="contact-info">
+          <div class="info-line">
+            <div class="info-icon"><i class="icon-envelop"></i></div>
+            <div class="info-text">
+              <h4>g.romney@gmail.com</h4>
+              <p>Prefiero los correos electrónicos y generalmente respondo rápidamente.</p>
+            </div>
+          </div>
+          <div class="info-line">
+            <div class="info-icon"><i class="icon-phone"></i></div>
+            <div class="info-text">
+              <h4>
+                <a href="https://t.me/gromney" target="_blank" rel="noopener noreferrer">gromney</a>
+              </h4>
+              <p>Si su caso es urgente puede contactarme con una llamada o un texto en telegram.</p>
+            </div>
+          </div>
+          <div class="info-line">
+            <div class="info-icon"><i class="icon-location"></i></div>
+            <div class="info-text">
+              <h4>Santo Domingo, DR / Remoto</h4>
+              <p>Me iteresan posiciones remota, pero me gusta cara a cara de vez en cuando</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>

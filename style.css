@@ -1,46 +1,119 @@
-::-webkit-scrollbar {
-    display: none;
+html{
+    scroll-behavior: smooth;
+    font-family: 'Space Grotesk';
 }
-
-body {
-    height: 100vh;
+body,p,h4{
+    margin: 0;  
+}
+body{
+   
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
     margin: 0;
-    /* overflow: hidden; */
+    padding: 0;
 }
-
-.header-container {
+.content{
+    padding:0 1rem;
+    padding-right: 2rem;
+}
+.header-container{
     position: fixed;
-    top: 0;
+    height: 6rem;
     width: 100%;
-    height: 20vh;
+    background: palegoldenrod;
 }
 
-.main-container {
-    /* display: grid;
-    grid-template-rows: auto; */
-    scroll-snap-type: y mandatory;
-    height: 100vh;
-    overflow-y: scroll;
+.header-content{
+    display: grid;
+    padding-top: 1rem;
+    justify-items: center;
+}
+.logo{
+    font-size: 1.5rem;
+}
+.menu{
+    width: 100%;
 }
 
-.section {
+.menu-list.contacts {
+   display: grid;
+   grid-auto-flow: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.menu-list.contacts img {
+height: 2rem;
+}
+.main{
+    scroll-snap-type: x mandatory;
+}
+.section{
     height: 100vh;
-    padding-top: 20vh;
+    padding-top: 6rem;
     scroll-snap-align: start;
 }
-
-#landing {}
-
-.skills-content {
+#landing h1{
+    font-size: 2.3rem;
+}
+.skiills{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    grid-template-columns: 
+        repeat(auto-fit, minmax(min(22rem,100%),1fr)) ;
+}
+.skill-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+   
 }
 
-#projects {}
+.skill-list span{
+    display: inline-block;
+    border-radius: 3px;
+    border: 2px solid #e5e5e5;
+    color: #666;
+    padding: 2px 7px;
+}
+#contact{
+    background: lavenderblush;
+    padding: 2rem 0;
+}
+.info-line{
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 1rem;
+}
+.contact-info{
+    display: grid;
+    gap: 1rem;
+}
+.info-text{
+    display: table-cell;
+}
 
-.footer-container {
-    height: 20vh;
-    /* scroll-snap-stop: normal; */
-    /* scroll-snap-align: end; */
-    /* width: 100%; */
+.icon-envelop:before {
+    content: url("./assets/img/envelope-solid.svg");
+}
+.icon-phone:before{
+    content: url("./assets/img/mobile-screen-button-solid.svg");
+}
+.icon-location:before {
+    content: url("./assets/img/location-dot-solid.svg");
+}
+
+@media only screen and (min-width: 768px) {
+    #landing h1 {
+        font-size: 4rem;
+    }
+
+    .contact-info {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
 }
