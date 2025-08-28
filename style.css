@@ -3,15 +3,42 @@
     padding: 0; /* Optional: Also remove default padding */
     box-sizing: border-box; /* Optional: Improve box model calculation */
 }
-:root,html,body {
+:root {
+    --bg-color: lightgray;
+    --text-color: #111;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #eee;
+}
+
+html,
+body {
     height: 100dvh;
     max-height: 100dvh;
-    background-color: lightgray;
-}
-html{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
     scroll-behavior: smooth;
-    font-family: 'Space Grotesk';
+        font-family: 'Space Grotesk';
 }
+
+.controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+#theme-toggle,
+#language-switcher {
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--text-color);
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+} 
 .page-container{
     height: auto;
     height: 100%;
@@ -28,8 +55,7 @@ html{
     gap: .5rem;
     text-align: center;
     font-size: 1.5rem; 
-}
-.footer{}
+} 
 ul {
     list-style: none;
     margin: 0;
@@ -45,9 +71,18 @@ ul {
     gap: 1rem;
 }
 img{
-    height: 4em;
+    height: 4em; 
 }
-
+.icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    background-color: var(--text-color);
+    /* El color viene del tema */
+    -webkit-mask: var(--icon) no-repeat center / contain;
+    mask: var(--icon) no-repeat center / contain;
+    transition: background-color 0.3s ease;
+}
 @media only screen and (min-width: 768px) {
     img {
         height: 2.3rem;

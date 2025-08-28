@@ -4,45 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
     <title>Geronimo Romney</title>
   </head>
   <body>
     <div class="page-container">
       <div class="header">
-        <h1 class="name"> Geronimo Romney </h1>
-        <h2 class="subtitle"><em>desarrollador</em></h2>
+        <h1 class="name" data-i18n="name"> Geronimo Romney </h1>
+        <h2 class="subtitle" data-i18n="role"><em>desarrollador</em></h2>
+
+        <!-- Controles -->
+        <div class="controls">
+          <!-- Selector de idioma -->
+          <select id="language-switcher">
+            <option value="es">🇪🇸 Español</option>
+            <option value="en">🇬🇧 English</option>
+          </select>
+          <!-- Toggle dark mode -->
+          <button id="theme-toggle">🌙</button>
+        </div>
       </div>
+
       <div class="hero-copy">
-        <p> Soy desarrollador con experiencia en .NET. </p>
-        <p> Estoy interesado en afinar mis conocimientos de React.js, React Native para crear aplicaciones web y móviles eficientes y escalables. </p>
-        <!-- <p> </p> -->
+        <p data-i18n="intro1">Soy desarrollador con experiencia en .Net.</p>
+        <p data-i18n="intro2">
+          Estoy interesado en afinar mis conocimientos de React.js, React Native para crear aplicaciones web y móviles eficientes y escalables.
+        </p>
       </div>
+
       <div class="footer">
         <ul class="menu-contacts">
           <li>
-            <a href="mailto:g.romney@gmail.com">
+            <!-- <a href="mailto:g.romney@gmail.com">
               <img src="./assets/img/envelope-solid.svg" alt="email contact me" />
-            </a>
+            </a> -->
+            <a href="mailto:g.romney@gmail.com" class="icon" style="--icon: url('./assets/img/envelope-solid.svg')"></a>
           </li>
           <li>
-            <a href="https://github.com/gromney" target="_blank" rel="noopener noreferrer">
-              <img src="./assets/img/github.svg" alt="github contact me" />
-            </a>
+            <a
+              href="https://github.com/gromney"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="icon"
+              style="--icon: url('./assets/img/github.svg')"
+            ></a>
           </li>
           <li>
-            <a href="https://linkedin.com/in/gromney" target="_blank" rel="noopener noreferrer">
-              <img src="./assets/img/linkedin.svg" alt="linkedin contact me" />
-            </a>
+            <a
+              href="https://linkedin.com/in/gromney"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="icon"
+              style="--icon: url('./assets/img/linkedin.svg')"
+            ></a>
           </li>
         </ul>
       </div>
     </div>
+
+    <!-- Script para idiomas y tema -->
+    <script src="script.js"></script>
   </body>
 </html>
